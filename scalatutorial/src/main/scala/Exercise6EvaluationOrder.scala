@@ -1,49 +1,43 @@
 object Exercise6EvaluationOrder extends App {
-  //question 1
-  val a: Int  = 1
-  val b: Int = 5
 
-  if(a<b){
-    println("a is less than b")
-  }
-  else{
-    println("a is not less than b")
-  }
-
-  //question 2
-  if(a<2){
-    println("a is less than 2")
-  }
-  else{
-    println("a is not less than 2")
-  }
-
-  if(b<2){
-    println("b is less than 2")
-  }
-  else{
-    println("b is not less than 2")
-  }
-
-  //question 3
-  val c: Int = 5
-
-  if(a<c){
-    println("a is less than c")
-    if(b<c){
-      println("b is less than c")
+  val sky: String = "sunny"
+  val temp: Int = 90
+  val farenheit: Int = 100
+  val celsius: Int = 100
+  val output: Boolean = {
+    if (sky.equalsIgnoreCase("sunny") && temp > 80) {
+      true
     }
-    else{
-      println("b is not less than c")
-    }
+    else
+      false
   }
-  else{
-    println("a is not less than c")
-    if(b<c){
-      println("b is less than c")
+
+  val question2: Boolean = {
+    if ((sky.equalsIgnoreCase("sunny") || sky.equalsIgnoreCase("partly cloudy")) && temp > 80) {
+      true
     }
-    else{
-      println("b is not less than c")
-    }
+    else
+      false
   }
+
+  val question3: Boolean = {
+    if ((sky.equalsIgnoreCase("sunny") || sky.equalsIgnoreCase("partly cloudy"))
+      && (temp > 80 || temp < 20)) {
+      true
+    }
+    else
+      false
+  }
+
+  val farenheitToCelsius: Double = {
+    (farenheit - 32)*(5.toDouble/9)
+  }
+  println(farenheitToCelsius)
+
+  val celsiusToFarenheit: Double = {
+    (farenheitToCelsius * (9.toDouble/5))+32
+  }
+  println(celsiusToFarenheit)
+
+
 }
