@@ -48,24 +48,23 @@ object Exercise7CompoundExpressions extends App {
   val doActivity: Boolean = {
     val lowTemp: Int = 50
     val highTemp: Int = 100
-    isOpen && if(goodTemperature>=lowTemp && goodTemperature<=highTemp)
+    isOpen && (goodTemperature>=lowTemp && goodTemperature<=highTemp)
   }
 
 //question 4
-  val activity = "running"
+  val activity4 = "running"
   val distance = 9
-  val hour = 10
    val willDo = {
     val runningDistance = 6
     val bikingDistance = 20
     val swimmingDistance = 1
-    if(activity == "running" && distance<=runningDistance){
+    if(activity4 == "running" && distance<=runningDistance){
       true
     }
-    else if(activity == "biking" && distance<=bikingDistance){
+    else if(activity4 == "biking" && distance<=bikingDistance){
       true
     }
-    else if(activity == "swimming" && distance<=swimmingDistance){
+    else if(activity4 == "swimming" && distance<=swimmingDistance){
       true
     }
     else false
