@@ -21,16 +21,17 @@ val myValue5 = "10"
 
 //Q5
 def squareArea(x: Int): Int = {x*x}
-def rectanglaArea(x: Int, y: Int) = {x*x}
-def trapezoidArea(x: Int, y: Int, h: Int) = {h/2*(x+y)}
+def rectanglaArea(x: Int, y: Int) = {x*y}
+def trapezoidArea(x: Int, y: Int, h: Double): Double = {h/2*(x+y)}
 
-squareArea(3) is 9
+squareArea(1) is 1
+squareArea(2) is 4
 squareArea(5) is 25
+rectanglaArea(2,2) is 4
+rectanglaArea(5,4) is 20
+trapezoidArea(2,2,4) is 8
+trapezoidArea(3,4,1) is 3.5
 
-//rectanglaArea(5,6) is 30
-def rectanglaArea2(x: Int, y: Int) = {x*y}
-rectanglaArea2(5,6) is 30
-trapezoidArea(5,5,5) is 25
 
 
 
